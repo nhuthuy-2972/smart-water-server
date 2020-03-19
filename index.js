@@ -25,13 +25,16 @@ app.get('/display/log',(req,res)=>{
 });
 
 app.post('/display',(req,res,next)=>{
+
 	var sensor = req.body;
-	readed.push(sensor);
-	console.log(readed);
+	console.log(sensor)
+	//readed.push(sensor);
+	//console.log(readed);
 	// res.render('display/log',{
 	// 	sensors : readed
 	// });
-	res.render('sendform');
+	//res.json(sensor);
+	res.send("ok");
 });
 
 app.listen(port,()=>{console.log("Server is started")});
