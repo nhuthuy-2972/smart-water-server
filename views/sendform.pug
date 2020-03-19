@@ -1,0 +1,16 @@
+extends ../layout/common
+
+block content
+	h1 Create form
+	form(action='/display', method='POST' class="w-25")
+		.form-group
+			label(for="name") Temparature
+			input#name.form-control(type='text', name='temp')
+		.form-group
+			label(for="phone") pH
+			input#phone.form-control(type='text', name='ph')
+		.from-group
+			label(for="avatar") Time
+			input#phone.form-control(type='text', name='time')
+		button(type='submit' class="btn btn-primary mt-3") Send
+		a(href="/display/log" class="btn btn-primary mt-3 ml-3") Dispaly
