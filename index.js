@@ -37,4 +37,4 @@ app.post('/display',(req,res,next)=>{
 	res.send("ok");
 });
 
-app.listen(port,()=>{console.log("Server is started")});
+app.listen(port,()=>{console.log("Server is started on port" + port)});
