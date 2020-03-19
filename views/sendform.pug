@@ -2,7 +2,7 @@ extends ../layout/common
 
 block content
 	h1 Create form
-	form(action='/display', method='POST' class="w-25")
+	form(action='/display', method='GET' class="w-25")
 		.form-group
 			label(for="name") Temparature
 			input#name.form-control(type='text', name='temp')

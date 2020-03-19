@@ -24,9 +24,15 @@ app.get('/display/log',(req,res)=>{
 	res.render('display/log',{sensors: readed});
 });
 
-app.post('/display',(req,res,next)=>{
+app.get('/display',(req,res,next)=>{
 
-	var sensor = req.body;
+	var sensor = {
+		temp : req.query.temp,
+		ph : req.query.ph,
+		time : req.query.time
+	}
+
+	//var sensor = req.body;
 	console.log(sensor)
 	readed.push(sensor);
 	console.log(readed);
