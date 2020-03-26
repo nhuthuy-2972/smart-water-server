@@ -5,12 +5,10 @@ block content
 		tr
 			th Temparature
 			th pH
-			th Time
 
 		each sensor in sensors
 			tr
 				td= sensor.temp
 				td= sensor.ph
-				td= sensor.time
 
 	a.btn.btn-primary(href='/send') Send

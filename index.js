@@ -24,23 +24,17 @@ app.get('/display/log',(req,res)=>{
 	res.render('display/log',{sensors: readed});
 });
 
-app.get('/display',(req,res,next)=>{
+app.post('/display',(req,res,next)=>{
 
-	var sensor = {
-		temp : req.query.temp,
-		ph : req.query.ph,
-		time : req.query.time
-	}
-
-	//var sensor = req.body;
+	var sensor = req.body;
 	console.log(sensor)
 	readed.push(sensor);
 	console.log(readed);
-	//res.render('display/log',{
-	//	sensors : readed
-	//});
+	res.render('display/log',{
+		sensors : readed
+	});
 	//res.json(sensor);
-	res.send("ok");
+	//res.send("ok");
 });
 
 app.listen(port,()=>{console.log("Server is started on port" + port)});
