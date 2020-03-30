@@ -30,11 +30,11 @@ app.post('/display',(req,res,next)=>{
 	console.log(sensor)
 	readed.push(sensor);
 	console.log(readed);
-	res.render('display/log',{
-		sensors : readed
-	});
+	// res.render('display/log',{
+	// 	sensors : readed
+	// });
 	//res.json(sensor);
-	//res.send("ok");
+	res.send("ok");
 });
 
 app.listen(port,()=>{console.log("Server is started on port" + port)});
