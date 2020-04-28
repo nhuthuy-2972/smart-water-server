@@ -28,6 +28,7 @@ app.post('/display',(req,res,next)=>{
 
 	var sensor = req.body;
 	console.log(sensor)
+
 	readed.push(sensor);
 	console.log(readed);
 	// res.render('display/log',{

@@ -3,12 +3,23 @@ extends ../../layout/common
 block content
 	table.table
 		tr
+			th Node Id
 			th Temparature
 			th pH
-
+			th ORP
+			th DO
+			th CO
+			th Battery
+			th Time
 		each sensor in sensors
 			tr
+				td= sensor.id
 				td= sensor.temp
 				td= sensor.ph
+				td= sensor.orp
+				td= sensor.do
+				td= sensor.co
+				td= sensor.bat
+				td= sensor.epocht
 
 	a.btn.btn-primary(href='/send') Send
